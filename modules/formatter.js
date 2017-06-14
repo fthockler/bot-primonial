@@ -13,17 +13,17 @@ exports.formatProperties = properties => {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": " Planifier une visite",
+                        "title": "Planifier un rdv",
                         "payload": "schedule_visit," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": "Voir les informations du conseiller",
+                        "title": "Voir le contact",
                         "payload": "contact_broker," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": "Contacter le conseiller",
+                        "title": "Etre contacté « ,
                         "payload": "contact_me," + property.getId()
                     }
                 ]
@@ -121,7 +121,7 @@ exports.formatBroker = broker => {
     elements.push({
         title: " Thomas Legrand ",
         subtitle: " Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr",
-        "image_url": "https://www.dropbox.com/s/20gsk3we1xyl1yc/Thomas.png?dl=0",
+        "image_url": "https://www.dropbox.com/s/20gsk3we1xyl1yc/Thomas.png",
         "buttons": [
             {
                 "type": "postback",
