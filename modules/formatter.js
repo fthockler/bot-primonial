@@ -23,7 +23,7 @@ exports.formatProperties = properties => {
                     },
                     {
                         "type": "postback",
-                        "title": "Etre contacté « ,
+                        "title": "Etre contacté " ,
                         "payload": "contact_me," + property.getId()
                     }
                 ]
