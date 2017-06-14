@@ -13,17 +13,17 @@ exports.formatProperties = properties => {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Schedule visit",
+                        "title": « Planifier une visite »,
                         "payload": "schedule_visit," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": "View broker info",
+                        "title": « Voir les informations du conseiller »,
                         "payload": "contact_broker," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": "Contact me",
+                        "title": « Contacter le conseiller »,
                         "payload": "contact_me," + property.getId()
                     }
                 ]
@@ -119,13 +119,13 @@ exports.formatAppointment = property => {
 exports.formatBroker = broker => {
     let elements = [];
     elements.push({
-        title: "Caroline Kingsley",
-        subtitle: "Senior Broker  · 617-219-6363 · ckingsley@dreamhouse.com",
-        "image_url": "https://s3-us-west-1.amazonaws.com/sfdc-demo/messenger/caroline_500x260.png",
+        title: « Thomas Legrand »,
+        subtitle: « Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr»,
+        "image_url": "https://www.dropbox.com/s/20gsk3we1xyl1yc/Thomas.png?dl=0",
         "buttons": [
             {
                 "type": "postback",
-                "title": "Contact Me",
+                "title": "Contactez moi« ,
                 "payload": "contact_me"
             }]
     });
