@@ -13,17 +13,17 @@ exports.formatProperties = properties => {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": « Planifier une visite »,
+                        "title": " Planifier une visite",
                         "payload": "schedule_visit," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": « Voir les informations du conseiller »,
+                        "title": "Voir les informations du conseiller",
                         "payload": "contact_broker," + property.getId()
                     },
                     {
                         "type": "postback",
-                        "title": « Contacter le conseiller »,
+                        "title": "Contacter le conseiller",
                         "payload": "contact_me," + property.getId()
                     }
                 ]
@@ -119,13 +119,13 @@ exports.formatAppointment = property => {
 exports.formatBroker = broker => {
     let elements = [];
     elements.push({
-        title: « Thomas Legrand »,
-        subtitle: « Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr»,
+        title: " Thomas Legrand ",
+        subtitle: " Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr",
         "image_url": "https://www.dropbox.com/s/20gsk3we1xyl1yc/Thomas.png?dl=0",
         "buttons": [
             {
                 "type": "postback",
-                "title": "Contactez moi« ,
+                "title": "Contactez moi" ,
                 "payload": "contact_me"
             }]
     });

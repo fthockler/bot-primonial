@@ -11,7 +11,7 @@ exports.schedule_visit = (sender, values) => {
 };
 
 exports.contact_broker = (sender, values) => {
-    messenger.send({text: « Voici les informations du conseiller pour ce programme}, sender);
+    messenger.send({text: "Voici les coordonnées du conseiller pour ce programme"}, sender);
     messenger.send(formatter.formatBroker(), sender);
 };
 
