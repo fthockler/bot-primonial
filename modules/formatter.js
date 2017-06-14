@@ -121,7 +121,7 @@ exports.formatBroker = broker => {
     elements.push({
         title: " Thomas Legrand ",
         subtitle: " Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr",
-        "image_url": "http://oi67.tinypic.com/wi9erl.jpg,
+        "image_url": "http://oi67.tinypic.com/wi9erl.jpg",
         "buttons": [
             {
                 "type": "postback",
