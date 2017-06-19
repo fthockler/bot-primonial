@@ -60,5 +60,5 @@ exports.hi = (sender) => {
 };
 
 exports.help = (sender) => {
-    messenger.send({text: `Vous pouvez me poser des questions comme "je cherche un programme pinel" ou "conseil pinel"`}, sender);
+    messenger.send({text: `Vous pouvez me poser des questions comme "projet pinel" ou "conseil pinel"` ou encore "programme pinel à Nice"}, sender);
 };

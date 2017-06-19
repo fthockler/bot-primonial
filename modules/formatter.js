@@ -105,12 +105,12 @@ exports.formatAppointment = property => {
                     {
                         "type": "postback",
                         "title": options[1],
-                        "payload": "confirm_visit," + property.get("City__c") + " à " + property.get("City__c") + "," + options[1]
+                        "payload": "confirm_visit," + options[1] + " . Nous vous apporterons des conseils pour votre projet et nous vous présenterons le programme " + property.get("Title__c") +" situé à " + property.get("City__c")
                     },
                     {
                         "type": "postback",
                         "title": options[2],
-                        "payload": "confirm_visit," + property.get("City__c") + " à " + property.get("City__c") + "," + options[2]
+                        "payload": "confirm_visit," + options[2] + " . Nous vous apporterons des conseils pour votre projet et nous vous présenterons le programme " + property.get("Title__c") +" situé à " + property.get("City__c")
                     }]
             }
         }
