@@ -100,7 +100,7 @@ exports.formatAppointment = property => {
                     {
                         "type": "postback",
                         "title": options[0],
-                        "payload": "confirm_visit," + options[0]+ ". Nous vous apporterons des conseils pour votre projet et nous vous présenterons le programme " + property.get("Title__c") +" situé à " + property.get("City__c")
+                        "payload": "confirm_visit. Nous vous apporterons des conseils pour votre projet et nous vous présenterons le programme " + property.get("Title__c") +" situé à " + property.get("City__c")
                     },
                     {
                         "type": "postback",
