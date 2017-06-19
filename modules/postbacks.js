@@ -16,7 +16,7 @@ exports.contact_broker = (sender, values) => {
 };
 
 exports.confirm_visit = (sender, values) => {
-    messenger.send({text: `OK, votre rendez-vous est confirmé ${values[2]}. ${values[1]}.`}, sender);
+    messenger.send({text: `OK, votre rendez-vous est confirmé le ${values[2]}. ${values[1]}.`}, sender);
 };
 
 exports.contact_me = (sender, values) => {
