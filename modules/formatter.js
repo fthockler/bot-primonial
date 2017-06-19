@@ -8,7 +8,7 @@ exports.formatProperties = properties => {
     properties.forEach(property => {
             elements.push({
                 title: property.get("Title__c"),
-                subtitle: `$ ${property.get("City__c")} ${property.get("State__c")} · ${numeral(property.get("Price__c")).format('$0,0')}`,
+                subtitle: ` ${property.get("City__c")} + "· Programme PINEl " + · ${numeral(property.get("Price__c")).format('$0,0')}`,
                 "image_url": property.get("Picture__c"),
                 "buttons": [
                     {
@@ -46,7 +46,7 @@ exports.formatPriceChanges = priceChanges => {
     priceChanges.forEach(priceChange => {
             let property = priceChange.get("Parent");
             elements.push({
-                title: `${property.Address__c}, ${property.City__c} ${property.State__c}`,
+                title: `${property.City__c} ${property.State__c}`,
                 subtitle: `Old price: ${numeral(priceChange.get("OldValue")).format('$0,0')} · New price: ${numeral(priceChange.get("NewValue")).format('$0,0')} on ${moment(priceChange.get("CreatedDate")).format("MMM Do")}`,
                 "image_url": property.Picture__c,
                 "buttons": [
@@ -82,6 +82,7 @@ exports.formatPriceChanges = priceChanges => {
 
 
 exports.formatAppointment = property => {
+	moment.locale('fr');
     var options = [
         moment().add(1, 'days').format('LLLL') + ' à 10h',
         moment().add(2, 'days').format('LLLL') + ' à 9h',
