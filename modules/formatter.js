@@ -8,7 +8,7 @@ exports.formatProperties = properties => {
     properties.forEach(property => {
             elements.push({
                 title: property.get("Title__c"),
-                subtitle: `${property.get("Address__c")}, ${property.get("City__c")} ${property.get("State__c")} · ${numeral(property.get("Price__c")).format('$0,0')}`,
+                subtitle: `$ ${property.get("City__c")} ${property.get("State__c")} · ${numeral(property.get("Price__c")).format('$0,0')}`,
                 "image_url": property.get("Picture__c"),
                 "buttons": [
                     {
@@ -83,33 +83,33 @@ exports.formatPriceChanges = priceChanges => {
 
 exports.formatAppointment = property => {
     var options = [
-        moment().add(1, 'days').format('ddd MMM Do') + ' at 10am',
-        moment().add(2, 'days').format('ddd MMM Do') + ' at 9am',
-        moment().add(2, 'days').format('ddd MMM Do') + ' at 5pm',
-        moment().add(3, 'days').format('ddd MMM Do') + ' at 1pm',
-        moment().add(3, 'days').format('ddd MMM Do') + ' at 6pm',
+        moment().add(1, 'days').format('ddd MMM Do') + ' à 10h',
+        moment().add(2, 'days').format('ddd MMM Do') + ' à 9h',
+        moment().add(2, 'days').format('ddd MMM Do') + ' à 15h',
+        moment().add(3, 'days').format('ddd MMM Do') + ' à 13h',
+        moment().add(3, 'days').format('ddd MMM Do') + ' à 18h',
     ];
     return {
         "attachment": {
             "type": "template",
             "payload": {
                 "template_type": "button",
-                "text": `Select one of the available appointments below at ${property.get("Address__c")} in ${property.get("City__c")}.`,
+                "text": `Choisissez un rendez-vous pour rencontrer votre conseiller pour le programme situé à ${property.get("City__c")}.`,
                 "buttons": [
                     {
                         "type": "postback",
                         "title": options[0],
-                        "payload": "confirm_visit," + property.get("Address__c") + " in " + property.get("City__c") + "," + options[0]
+                        "payload": "confirm_visit," + property.get("City__c") + " à " + property.get("City__c") + "," + options[0]
                     },
                     {
                         "type": "postback",
                         "title": options[1],
-                        "payload": "confirm_visit," + property.get("Address__c") + " in " + property.get("City__c") + "," + options[1]
+                        "payload": "confirm_visit," + property.get("City__c") + " à " + property.get("City__c") + "," + options[1]
                     },
                     {
                         "type": "postback",
                         "title": options[2],
-                        "payload": "confirm_visit," + property.get("Address__c") + " in " + property.get("City__c") + "," + options[2]
+                        "payload": "confirm_visit," + property.get("City__c") + " à " + property.get("City__c") + "," + options[2]
                     }]
             }
         }
@@ -119,8 +119,8 @@ exports.formatAppointment = property => {
 exports.formatBroker = broker => {
     let elements = [];
     elements.push({
-        title: " Thomas Legrand ",
-        subtitle: " Conseiller Patrimonial  · 0612345678 · tlegrand@primonial.fr",
+        title: " Aurélie Legrand ",
+        subtitle: " Conseillère Patrimonial  · 0612345678 · alegrand@primonial.fr",
         "image_url": "http://oi67.tinypic.com/wi9erl.jpg",
         "buttons": [
             {

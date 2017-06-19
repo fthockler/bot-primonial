@@ -12,7 +12,7 @@ exports.searchHouse = (sender) => {
 };
 
 exports.searchHouse_City = (sender, values) => {
-    messenger.send({text: `OK, looking for houses in ${values[1]}`}, sender);
+    messenger.send({text: `OK, je cherche les programmes à ${values[1]}`}, sender);
     salesforce.findProperties({city: values[1]}).then(properties => {
         messenger.send(formatter.formatProperties(properties), sender);
     });
