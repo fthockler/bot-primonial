@@ -83,11 +83,11 @@ exports.formatPriceChanges = priceChanges => {
 
 exports.formatAppointment = property => {
     var options = [
-        moment().add(1, 'days').format('ddd MMM Do') + ' à 10h',
-        moment().add(2, 'days').format('ddd MMM Do') + ' à 9h',
-        moment().add(2, 'days').format('ddd MMM Do') + ' à 15h',
-        moment().add(3, 'days').format('ddd MMM Do') + ' à 13h',
-        moment().add(3, 'days').format('ddd MMM Do') + ' à 18h',
+        moment().add(1, 'days').format('LLLL') + ' à 10h',
+        moment().add(2, 'days').format('LLLL') + ' à 9h',
+        moment().add(2, 'days').format('LLLL') + ' à 15h',
+        moment().add(3, 'days').format('LLLL') + ' à 13h',
+        moment().add(3, 'days').format('LLLL') + ' à 18h',
     ];
     return {
         "attachment": {
@@ -119,9 +119,9 @@ exports.formatAppointment = property => {
 exports.formatBroker = broker => {
     let elements = [];
     elements.push({
-        title: " Aurélie Legrand ",
-        subtitle: " Conseillère Patrimonial  · 0612345678 · alegrand@primonial.fr",
-        "image_url": "http://oi67.tinypic.com/wi9erl.jpg",
+        title: " Aurélie - Conseillère Pimonial",
+        subtitle: "0612345678 · aurelie@primonial.fr",
+        "image_url": "http://oi63.tinypic.com/14a9a8j.jpg",
         "buttons": [
             {
                 "type": "postback",
