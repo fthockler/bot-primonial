@@ -84,7 +84,7 @@ exports.formatPriceChanges = priceChanges => {
 exports.formatAppointment = property => {
 	moment.locale('fr');
     var options = [
-        moment().add(1, 'days').format('Ddd Do MMM') + ' à 10h',
+        moment().add(1, 'days').format('dddd Do MMM') + ' à 10h',
         moment().add(2, 'days').format('Ddd Do MMM') + ' à 9h',
         moment().add(2, 'days').format('Ddd Do MMM') + ' à 15h',
         moment().add(3, 'days').format('Ddd Do MMM') + ' à 13h',
@@ -126,7 +126,7 @@ exports.formatBroker = broker => {
         "buttons": [
             {
                 "type": "postback",
-                "title": "Contactez moi" ,
+                "title": "Etre contacté par Aurélie" ,
                 "payload": "contact_me"
             }]
     });
