@@ -85,10 +85,10 @@ exports.formatAppointment = property => {
 	moment.locale('fr');
     var options = [
         moment().add(1, 'days').format('dddd Do MMM') + ' à 10h',
-        moment().add(2, 'days').format('Ddd Do MMM') + ' à 9h',
-        moment().add(2, 'days').format('Ddd Do MMM') + ' à 15h',
-        moment().add(3, 'days').format('Ddd Do MMM') + ' à 13h',
-        moment().add(3, 'days').format('Ddd Do MMM') + ' à 18h',
+        moment().add(2, 'days').format('dddd Do MMM') + ' à 9h',
+        moment().add(2, 'days').format('dddd Do MMM') + ' à 15h',
+        moment().add(3, 'days').format('dddd Do MMM') + ' à 13h',
+        moment().add(3, 'days').format('dddd Do MMM') + ' à 18h',
     ];
     return {
         "attachment": {
@@ -100,7 +100,7 @@ exports.formatAppointment = property => {
                     {
                         "type": "postback",
                         "title": options[0],
-                        "payload": "confirm_visit, à " + property.get("City__c") + "," + options[0]
+                        "payload": "confirm_visit, pour échanger sur votre projet et vous présenter le programme "+ property.get("Title__c") +" situé à " + options[0]
                     },
                     {
                         "type": "postback",
