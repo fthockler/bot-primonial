@@ -24,7 +24,7 @@ exports.formatProperties = properties => {
                     {
                         "type": "postback",
                         "title": "Etre contacté " ,
-                        "payload": "contact_me," + property.getId()
+                        "payload": "contact_me,"
                     }
                 ]
             })
