@@ -8,7 +8,7 @@ exports.formatProperties = properties => {
     properties.forEach(property => {
             elements.push({
                 title: property.get("Title__c"),
-                subtitle: ` ${property.get("City__c")} · Programme PINEL · ${numeral(property.get("Price__c")).format('0,0')}€`,
+                subtitle: ` ${property.get("City__c")} · PINEL · ${numeral(property.get("Price__c")).format('0,0')}€`,
                 "image_url": property.get("Picture__c"),
                 "buttons": [
                     {
@@ -84,11 +84,11 @@ exports.formatPriceChanges = priceChanges => {
 exports.formatAppointment = property => {
 	moment.locale('fr');
     var options = [
-        moment().add(1, 'days').format('dddd Do MMM') + ' à 10h',
-        moment().add(2, 'days').format('dddd Do MMM') + ' à 9h',
-        moment().add(2, 'days').format('dddd Do MMM') + ' à 15h',
-        moment().add(3, 'days').format('dddd Do MMM') + ' à 13h',
-        moment().add(3, 'days').format('dddd Do MMM') + ' à 18h',
+        moment().add(1, 'days').format('dddd Do') + ' à 10h',
+        moment().add(2, 'days').format('dddd Do') + ' à 9h',
+        moment().add(2, 'days').format('dddd Do') + ' à 15h',
+        moment().add(3, 'days').format('dddd Do') + ' à 13h',
+        moment().add(3, 'days').format('dddd Do') + ' à 18h',
     ];
     return {
         "attachment": {
@@ -126,7 +126,7 @@ exports.formatBroker = broker => {
         "buttons": [
             {
                 "type": "postback",
-                "title": "Etre contacté par Aurélie" ,
+                "title": "Etre contacté" ,
                 "payload": "contact_me"
             }]
     });
